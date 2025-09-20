@@ -3,66 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KyomaSuzuki</title>
+    <title>Kyoma Suzuki | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
-        <h1>I'm KyomaSuzuki! Welcome to mysite👋</h1>
+        <nav>
+            <div class="container">
+                <a href="#hero" class="site-title">Kyoma Suzuki</a>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#career">Career</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <section id="profile">
-            <h2>自己紹介</h2>
-            <div class="profile-content">
-                <div class="profile-image">
-                    <img src="images/your_photo.jpg" alt="あなたの写真" class="profile-photo">
-                </div>
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-heading">Welcome to my portfolio!</h1>
+            <p class="hero-subheading">A passionate student of Engineering and Technology</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="about" class="section-bg-light">
+            <h2>About Me</h2>
+            <div class="profile-card">
+                <img src="images/your_photo.jpg" alt="Kyoma Suzuki" class="profile-photo">
                 <div class="profile-details">
-                    <p><strong>名前：</strong>鈴木 暁満（すずき きょうま）</p>
-                    <p><strong>所属：</strong>筑波大学理工学群工学システム学類</p>
-                    <p><strong>趣味：</strong>料理</p>
+                    <h3>鈴木 暁満（すずき きょうま）</h3>
+                    <p>筑波大学 理工学群 工学システム学類</p>
+                    <p>こんにちは、すずききょうまです。大学では主にシステム開発やロボット工学について学んでいます。新しい技術に触れること、そしてそれを形にすることに情熱を注いでいます。</p>
                 </div>
             </div>
-            <p>すずききょうまです。</p>
-        </section>
-
-        <section id="Carrer">
-            <h2>経歴というかなんというか</h2>
-        </section>
-
-        <section id="skills">
-            <h2>スキル・興味</h2>
-            <ul>
-                <li><strong>プログラミング言語</strong>:C,C++,C#,Python,MATLAB</li>
-                <li><strong>マークアップ</strong>:LaTeX,Typst</li>
-                <li><strong>フレームワーク、ツール</strong>:Unity,GitHub</li>
-                <li><strong>工作</strong>:Arduino</li>
-                
-            </ul>
-        </section>
-
-        <section id="hobbies">
-            <h2>趣味</h2>
-            <p>色々なことに興味があります。</p>
-            <ul>
-                <li>【料理】：日常的に調理を楽しんでおり、食材や調理法を工夫して新しいレシピに挑戦しています。SNSなどで情報を収集し、レパートリーを広げています。</li>
-                <li>【ドライブ】：車がほしいです。</li>
-            </ul>
         </section>
         
-        <section id="links">
-            <h2>外部サイトへのリンク</h2>
-            <ul>
-                <li><a href="https://qiita.com/KyomaSuzuki" target="_blank" rel="noopener noreferrer">Qiita</a></li>
-                <li><a href="https://github.com/KyomaSuzuki" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="【Google BloggerのURL】" target="_blank" rel="noopener noreferrer">Google Blogger</a></li>
-            </ul>
+        <section id="career" class="section-bg-dark">
+            <h2>Career & Experiences</h2>
+            <div class="career-item">
+                <h3>筑波大学 理工学群 工学システム学類</h3>
+                <p class="career-date">2022年4月 - 現在</p>
+                <p>工学の基礎から応用まで幅広く学習。特にロボット制御やシステム統合に興味を持ち、研究に取り組んでいます。</p>
+            </div>
+            <div class="career-item">
+                <h3>サークル・プロジェクト活動</h3>
+                <p class="career-date">2023年 - 2024年</p>
+                <p>ロボットコンテストのプロジェクトに参加し、チームでロボットの設計から製作までを担当しました。この経験を通して、協調性と問題解決能力を培いました。</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section-bg-light">
+            <h2>Skills & Interests</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>プログラミング言語</h3>
+                    <ul>
+                        <li>C, C++, C#, Python, MATLAB</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h3>マークアップ・ツール</h3>
+                    <ul>
+                        <li>LaTeX, Typst</li>
+                        <li>Git, GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h3>フレームワーク・その他</h3>
+                    <ul>
+                        <li>Unity</li>
+                        <li>Arduino (電子工作)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="section-bg-dark">
+            <h2>Hobbies</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-item">
+                    <h3>料理</h3>
+                    <img src="images/cooking_photo.jpg" alt="料理の写真" class="hobby-image">
+                    <p>日常的に調理を楽しんでおり、食材や調理法を工夫して新しいレシピに挑戦しています。SNSなどで情報を収集し、レパートリーを広げています。</p>
+                </div>
+                <div class="hobby-item">
+                    <h3>ドライブ</h3>
+                    <img src="images/car_photo.jpg" alt="車の写真" class="hobby-image">
+                    <p>週末にはドライブを楽しんでいます。美しい景色を求めて遠出することが多く、ストレス解消にもなっています。いつか自分の車を持つのが夢です。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="links" class="section-bg-light">
+            <h2>Links</h2>
+            <div class="links-grid">
+                <a href="https://qiita.com/KyomaSuzuki" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <img src="images/icon_qiita.png" alt="Qiita Icon">
+                    <span>Qiita</span>
+                </a>
+                <a href="https://github.com/KyomaSuzuki" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <img src="images/icon_github.png" alt="GitHub Icon">
+                    <span>GitHub</span>
+                </a>
+                <a href="【Google BloggerのURL】" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <img src="images/icon_blogger.png" alt="Blogger Icon">
+                    <span>Google Blogger</span>
+                </a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 鈴木暁満</p>
+        <div class="container">
+            <p>&copy; 2025 Kyoma Suzuki</p>
+        </div>
     </footer>
 </body>
 </html>
