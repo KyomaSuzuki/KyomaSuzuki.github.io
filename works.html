@@ -1,41 +1,75 @@
-/* 過去作品をまとめる */
-
-<!doctyoe html>
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewpoint" content="width=device-widh,initial-scale=1"/>
-        <title>works</title>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyoma Suzuki | Works</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:url" content="https://kyomasuzuki.github.io/works.html"/>
+    <meta property="og:title" content="Kyoma Suzuki | Works (制作物一覧)"/>
     </head>
-
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-heading">Works Page</h1>
-            <p class="hero-subheading">過去に作ったものをまとめています</p>
-        </div>
-    </section>
-
-/* パンくずリスト作りたいね */
-
-<header>
+<body>
+    <header>
         <nav>
             <div class="container">
-                <a href="#hero" class="site-title">Kyoma Suzuki</a>
+                <a href="index.html" class="site-title">Kyoma Suzuki</a>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#career">Career</a></li>
+                    <li><a href="works.html">Works</a></li> <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#hobbies">Hobbies</a></li>
+                    <li><a href="index.html#links">Links</a></li>
+                </ul>
             </div>
         </nav>
-</header>1
-
-<body>
+    </header>
 
     <main class="container">
-        <section id="works" class="section-bg-dark">
-            <h2>自動噴霧器</h2>
-            <div class="works-item">
-                <img src="",alt="噴霧器" class="works-card">
-                <p>説明文</p>
-            </div>
+        <section id="works" class="section-bg-light">
+            <h2>Works / 制作物</h2>
+            <p class="section-description">これまでに個人やチームで制作したプロジェクトの一部を紹介します。</p>
+
+            <div class="works-grid">
+                <div class="work-card">
+                    <img src="images/work_robot.jpg" alt="ロボットコンテストの画像" class="work-image">
+                    <div class="card-content">
+                        <h3>競技用自律走行ロボット</h3>
+                        <p class="work-tag">#C++ #Arduino #ロボット制御</p>
+                        <p>大学のプロジェクトで制作した、特定のタスクを自律的にこなす競技用ロボットです。センサー情報に基づいた経路計画とPID制御を実装しました。</p>
+                        <a href="【作品詳細のURLまたはGitHubリポジトリ】" target="_blank" class="card-link">詳細を見る</a>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <img src="images/work_web.jpg" alt="Webアプリの画像" class="work-image">
+                    <div class="card-content">
+                        <h3>料理レシピ検索Webアプリ</h3>
+                        <p class="work-tag">#Python #Flask #HTML/CSS</p>
+                        <p>趣味の料理を活かし、食材名からレシピを検索できるWebアプリケーションを開発しました。フロントエンドとバックエンドの両方を担当しています。</p>
+                        <a href="【作品詳細のURLまたはGitHubリポジトリ】" target="_blank" class="card-link">デモサイト</a>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <img src="images/work_game.jpg" alt="ゲームのスクリーンショット" class="work-image">
+                    <div class="card-content">
+                        <h3>Unity製 3Dアクションゲーム</h3>
+                        <p class="work-tag">#C# #Unity #3Dモデリング</p>
+                        <p>Unityを用いて制作した個人開発の3Dアクションゲームです。キャラクターの動作制御やUI設計などを学びました。</p>
+                        <a href="【作品詳細のURLまたはGitHubリポジトリ】" target="_blank" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                
+                </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kyoma Suzuki</p>
+        </div>
+    </footer>
 </body>
+</html>
