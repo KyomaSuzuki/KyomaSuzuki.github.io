@@ -515,3 +515,51 @@ h2::after {
         grid-template-columns: 1fr; /* 小さい画面では1列にする */
     }
 }
+
+/* ==================================== */
+/* Skillsセクション内のWorksボタンのスタイル */
+/* ==================================== */
+
+.works-link-container {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.works-button {
+    display: inline-block;
+    background-color: var(--secondary-color); /* アクセントカラー */
+    color: white;
+    font-family: var(--font-family-en);
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.works-button:hover {
+    background-color: var(--primary-color); /* ホバーでメインカラーに変更 */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================================== */
+/* Worksページのナビゲーション修正 */
+/* ==================================== */
+
+/* works.htmlでのナビゲーションの調整（index.htmlへのリンクを#セクションからworks.htmlに変更） */
+header ul li a[href="works.html"] {
+    /* works.htmlのナビゲーションで、Worksが選択されているように見せる */
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* index.htmlにworks.htmlのナビゲーションがなくなったため、index.htmlのナビゲーションを元に戻す */
+header ul li a[href*="#"] {
+    /* メインページ内のセクションリンクのスタイル（既存設定があれば不要だが念のため） */
+    color: white;
+}
