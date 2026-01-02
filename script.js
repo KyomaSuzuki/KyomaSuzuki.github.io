@@ -1,41 +1,47 @@
-// カルーセルの制御
-const slides = document.querySelectorAll('.carousel-slide');
-const dots = document.querySelectorAll('.dot');
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  // --- カルーセル機能 ---
+  const slides = document.querySelectorAll(".carousel-slide");
+  const dots = document.querySelectorAll(".dot");
+  let currentSlide = 0;
 
-function showSlide(index) {
-    slides.forEach(s => s.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-    
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-}
+  function showSlide(index) {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    dots.forEach((dot) => dot.classList.remove("active"));
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+  }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
 
-// 5秒ごとに切り替え
-setInterval(nextSlide, 5000);
+  // 5秒ごとにスライド切り替え
+  let slideInterval = setInterval(nextSlide, 5000);
 
-// --- 追加：スクロールフェードインの制御 ---
-const observerOptions = {
-    threshold: 0.2
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-        }
+  // ドットクリックで手動切り替え
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+      clearInterval(slideInterval); // 手動操作後は一度タイマーリセット
+      slideInterval = setInterval(nextSlide, 5000);
     });
-}, observerOptions);
+  });
 
-// すべてのsectionタグに自動でフェードインを適用する場合
-document.querySelectorAll('section').forEach(section => {
-    if(section.id !== 'hero') { // hero以外
-        section.classList.add('fade-in');
-        observer.observe(section);
-    }
+  // --- スクロールフェードイン (Intersection Observer) ---
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.1 } // 10%見えたら実行
+  );
+
+  revealElements.forEach((el) => revealObserver.observe(el));
 });
