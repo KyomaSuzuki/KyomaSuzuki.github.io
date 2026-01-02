@@ -559,7 +559,6 @@ header ul li a[href="works.html"] {
 header ul li a[href*="#"] {
     /* メインページ内のセクションリンクのスタイル（既存設定があれば不要だが念のため） */
     color: white;
-<<<<<<< HEAD
 }
 
 /* カルーセル全体のコンテナ */
@@ -643,6 +642,4 @@ header ul li a[href*="#"] {
 .fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
-=======
->>>>>>> main
 }
