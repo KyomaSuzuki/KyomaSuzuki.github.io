@@ -1,182 +1,268 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kyoma Suzuki | Portfolio</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    
-    <meta property="og:url" content="https://kyomasuzuki.github.io/"/>
-    <meta property="og:type" content="鈴木暁満のwebサイト"/>
-    <meta property="og:title" content="Kyoma Suzuki "/>
-    <meta property="og:description" content="筑波大学の鈴木暁満（すずき きょうま）のポートフォリオサイトです。スキル、経歴、趣味などを紹介しています。"/>
-    <meta property="og:site_name" content="Kyoma Suzuki "/>
-    <meta property="og:image" content="https://kyomasuzuki.github.io/images/ogp.png"/>
-    
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-   <section id="hero" class="carousel-container">
-    <div class="carousel-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero_background.jpg');">
-        <div class="hero-content">
-            <h1 class="hero-heading">Welcome to mysite!!</h1>
-            <p class="hero-subheading">A student of Engineering and Technology</p>
-        </div>
+    <meta property="og:url" content="https://kyomasuzuki.github.io/" />
+    <meta property="og:type" content="鈴木暁満のwebサイト" />
+    <meta property="og:title" content="Kyoma Suzuki " />
+    <meta
+      property="og:description"
+      content="筑波大学の鈴木暁満（すずき きょうま）のポートフォリオサイトです。スキル、経歴、趣味などを紹介しています。"
+    />
+    <meta property="og:site_name" content="Kyoma Suzuki " />
+    <meta
+      property="og:image"
+      content="https://kyomasuzuki.github.io/images/ogp.png"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+  <section id="hero" class="carousel-container">
+    <div
+      class="carousel-slide active"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('images/hero_background.jpg');
+      "
+    >
+      <div class="hero-content">
+        <h1 class="hero-heading">Welcome to mysite!!</h1>
+        <p class="hero-subheading">A student of Engineering and Technology</p>
+      </div>
     </div>
 
-    <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero_background2.jpg');">
-        <div class="hero-content">
-            <h1 class="hero-heading">Building Systems</h1>
-            <p class="hero-subheading">I love C++, Python, and Robotics</p>
-        </div>
+    <div
+      class="carousel-slide"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('images/hero_background2.jpg');
+      "
+    >
+      <div class="hero-content">
+        <h1 class="hero-heading">Building Systems</h1>
+        <p class="hero-subheading">I love C++, Python, and Robotics</p>
+      </div>
     </div>
 
-    <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero_background3.jpg');">
-        <div class="hero-content">
-            <h1 class="hero-heading">Let's Connect!!</h1>
-            <p class="hero-subheading">Check out my Works below</p>
-        </div>
+    <div
+      class="carousel-slide"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('images/hero_background3.jpg');
+      "
+    >
+      <div class="hero-content">
+        <h1 class="hero-heading">Let's Connect!!</h1>
+        <p class="hero-subheading">Check out my Works below</p>
+      </div>
     </div>
 
     <div class="carousel-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
-    </section>
+  </section>
 
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#hero" class="site-title">Kyoma Suzuki</a>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#career">Career</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#links">Links</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>1
-<body>
- 
-
+  <header>
+    <nav>
+      <div class="container">
+        <a href="#hero" class="site-title">Kyoma Suzuki</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#career">Career</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  1
+  <body>
     <main class="container">
-        <section id="about" class="section-bg-light">
-            <h2>About Me</h2>
-            <div class="profile-card">
-                <img src="images/your_photo.jpg" alt="Kyoma Suzuki" class="profile-photo">
-                <div class="profile-details">
-                    <h3>鈴木 暁満（すずき きょうま）</h3>
-                    <p>新潟県出身の大学生です。新潟県産のお米で生きています。</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="career" class="section-bg-dark">
-            <h2>Career & Experiences</h2>
-            <div class="career-item">
-                <h3>筑波大学 理工学群 工学システム学類</h3>
-                <p class="career-date">2022年4月 - 現在</p>
-                <p>工学の基礎から応用まで幅広く学習。機械工学を学んでおり、ロボット開発を行っています。</p>
-                <h3>筑波大学大学院</h3>
-                <p class="career-date">2026年4月-（予定）</p>
-                <p>大学院進学予定。</p>
-                </div>
-            <div class="career-item">
-                <h3>サークル</h3>
-                <p class="career-date">2023年</p>
-                <p>学園祭実行委員会の委員長として、コロナ禍明け初の対面開催を実現しました。</p>
-                <a href="https://sohosai.com/" target="_blank" rel="noopener noreferrer">雙峰祭公式サイト</a>
-                <p class="career-date">2024年 - 2025</p>
-                <p>新入生歓迎委員会の副委員長（代行）として、委員会の立ち上げから新規企画の運営までを担いました。</p>
-                <a href="https://www.stb.tsukuba.ac.jp/~shinkan/" target="_blank" rel="noopener noreferrer">新入生歓迎委員会公式サイト</a>
-            </div>
-        </section>
+      <section id="about" class="section-bg-light">
+        <h2>About Me</h2>
+        <div class="profile-card">
+          <img
+            src="images/your_photo.jpg"
+            alt="Kyoma Suzuki"
+            class="profile-photo"
+          />
+          <div class="profile-details">
+            <h3>鈴木 暁満（すずき きょうま）</h3>
+            <p>新潟県出身の大学生です。新潟県産のお米で生きています。</p>
+          </div>
+        </div>
+      </section>
 
-        <section id="skills" class="section-bg-light">
-            <h2>Skills & Interests</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h3>プログラミング言語</h3>
-                    <ul>
-                        <li>C, C++, C#</li>
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div class="skill-item">
-                    <h3>マークアップ・ツール</h3>
-                    <ul>
-                        <li>LaTeX, Typst</li>
-                        <li>Git, GitHub</li>
-                    </ul>
-                </div>
-                <div class="skill-item">
-                    <h3>フレームワーク等</h3>
-                    <ul>
-                        <li>Unity</li>
-                        <li>Arduino (電子工作)</li>
-                        <li>SolidWorks</li>
-                    </ul>
-                </div>
-            </div>
-<!---作品のページへのリンク--->
-            <div class="works-link-container">
-                <a href="works.html" class="works-button">
-                私の制作物を見る (Works) →
-                </a>
-            </div>
-        </section>
-        
+      <section id="career" class="section-bg-dark">
+        <h2>Career & Experiences</h2>
+        <div class="career-item">
+          <h3>筑波大学 理工学群 工学システム学類</h3>
+          <p class="career-date">2022年4月 - 現在</p>
+          <p>
+            工学の基礎から応用まで幅広く学習。機械工学を学んでおり、ロボット開発を行っています。
+          </p>
+          <h3>筑波大学大学院</h3>
+          <p class="career-date">2026年4月-（予定）</p>
+          <p>大学院進学予定。</p>
+        </div>
+        <div class="career-item">
+          <h3>サークル</h3>
+          <p class="career-date">2023年</p>
+          <p>
+            学園祭実行委員会の委員長として、コロナ禍明け初の対面開催を実現しました。
+          </p>
+          <a
+            href="https://sohosai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >雙峰祭公式サイト</a
+          >
+          <p class="career-date">2024年 - 2025</p>
+          <p>
+            新入生歓迎委員会の副委員長（代行）として、委員会の立ち上げから新規企画の運営までを担いました。
+          </p>
+          <a
+            href="https://www.stb.tsukuba.ac.jp/~shinkan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >新入生歓迎委員会公式サイト</a
+          >
+        </div>
+      </section>
 
-        <section id="hobbies" class="section-bg-dark">
-            <h2>Hobbies</h2>
-            <div class="hobbies-grid">
-                <div class="hobby-item">
-                    <h3>料理</h3>
-                    <img src="images/cooking.jpg" alt="料理の写真" class="hobby-image">
-                    <p>日常的に調理を楽しんでおり、食材や調理法を工夫して新しいレシピに挑戦しています。SNSなどで情報を収集し、レパートリーを広げています。</p>
-                    <h3>旅行</h3>
-                    <img src="images/travel_photo.jpg" alt="旅行の写真" class="hobby-image">
-                    <p>長期休みには旅行に行きます！主に国内</p>
-                    <h3>特撮</h3>
-                    <img src="images/tokusatsu_photo.jpg" alt="特撮の写真" class="hobby-image">
-                    <p>幼少期からの趣味で、仮面ライダーや戦隊モノが好きです。特にロボットやアイテムが好きです。おもちゃ大好き</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="links" class="section-bg-light">
-            <h2>Links</h2>
-            <div class="links-grid">
-                <p>技術系の話してみたいQiita</p>
-                <a href="https://qiita.com/KyomaSuzuki" target="_blank" rel="noopener noreferrer" class="link-card">
-                    <img src="images/icon_qiita.png" alt="Qiita Icon">
-                    <span>Qiita</span>
-                </a>
-                <p>たまに使うGithub</p>
-                <a href="https://github.com/KyomaSuzuki" target="_blank" rel="noopener noreferrer" class="link-card">
-                    <img src="images/icon_github.png" alt="GitHub Icon">
-                    <span>GitHub</span>
-                </a>
-                <p>日常のことを綴るはてなブログ</p>
-                <a href="https://hiyo-kyon.hatenablog.com/?_gl=1*1huntcb*_gcl_au*MTQ5NTEyMDIwNy4xNzU4MzQyNjUx" target="_blank" rel="noopener noreferrer" class="link-card">
-                    <img src="images/icon_hatena.png" alt="Hatena Blog Icon">
-                    <span>はてなブログ</span>
-                </a>
-            </div>
-        </section>
+      <section id="skills" class="section-bg-light">
+        <h2>Skills & Interests</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <h3>プログラミング言語</h3>
+            <ul>
+              <li>C, C++, C#</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <h3>マークアップ・ツール</h3>
+            <ul>
+              <li>LaTeX, Typst</li>
+              <li>Git, GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <h3>フレームワーク等</h3>
+            <ul>
+              <li>Unity</li>
+              <li>Arduino (電子工作)</li>
+              <li>SolidWorks</li>
+            </ul>
+          </div>
+        </div>
+        <div class="works-link-container">
+          <a href="works.html" class="works-button">
+            私の制作物を見る (Works) →
+          </a>
+        </div>
+      </section>
+
+      <!---作品のページへのリンク--->
+
+      <section id="hobbies" class="section-bg-dark">
+        <h2>Hobbies</h2>
+        <div class="hobbies-grid">
+          <div class="hobby-item">
+            <h3>料理</h3>
+            <img
+              src="images/cooking.jpg"
+              alt="料理の写真"
+              class="hobby-image"
+            />
+            <p>
+              日常的に調理を楽しんでおり、食材や調理法を工夫して新しいレシピに挑戦しています。SNSなどで情報を収集し、レパートリーを広げています。
+            </p>
+            <h3>旅行</h3>
+            <img
+              src="images/travel_photo.jpg"
+              alt="旅行の写真"
+              class="hobby-image"
+            />
+            <p>長期休みには旅行に行きます！主に国内</p>
+            <h3>特撮</h3>
+            <img
+              src="images/tokusatu_photo.JPG"
+              alt="特撮の写真"
+              class="hobby-image"
+            />
+            <p>
+              幼少期からの趣味で、仮面ライダーや戦隊モノが好きです。特にロボットやアイテムが好きです。おもちゃ大好き
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="links" class="section-bg-light">
+        <h2>Links</h2>
+        <div class="links-grid">
+          <p>技術系の話してみたいQiita</p>
+          <a
+            href="https://qiita.com/KyomaSuzuki"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+          >
+            <img src="images/icon_qiita.png" alt="Qiita Icon" />
+            <span>Qiita</span>
+          </a>
+          <p>たまに使うGithub</p>
+          <a
+            href="https://github.com/KyomaSuzuki"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+          >
+            <img src="images/icon_github.png" alt="GitHub Icon" />
+            <span>GitHub</span>
+          </a>
+          <p>日常のことを綴るはてなブログ</p>
+          <a
+            href="https://hiyo-kyon.hatenablog.com/?_gl=1*1huntcb*_gcl_au*MTQ5NTEyMDIwNy4xNzU4MzQyNjUx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+          >
+            <img src="images/icon_hatena.png" alt="Hatena Blog Icon" />
+            <span>はてなブログ</span>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Kyoma Suzuki</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2025 Kyoma Suzuki</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
