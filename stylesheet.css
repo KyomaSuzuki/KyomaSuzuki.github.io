@@ -2,7 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
 
 /* デザイン変数：一番最初の配色 */
+/* Google Fontsのインポート */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+/* デザイン変数：一番最初の配色 */
 :root {
+    --primary-color: #4a90e2;    /* 鮮やかな青 */
+    --secondary-color: #f7b731;  /* アクセントの黄/オレンジ */
+    --light-bg: #f5f7fa;         /* 薄いグレー */
+    --dark-bg: #e3f2fd;          /* 薄い水色 */
+    --text-color: #333;
+    --card-bg: #ffffff;
     --primary-color: #4a90e2;    /* 鮮やかな青 */
     --secondary-color: #f7b731;  /* アクセントの黄/オレンジ */
     --light-bg: #f5f7fa;         /* 薄いグレー */
@@ -18,9 +28,15 @@ body {
     padding: 0;
     color: var(--text-color);
     background-color: var(--light-bg);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--light-bg);
     scroll-behavior: smooth;
 }
 
+/* コンテナ */
 /* コンテナ */
 .container {
     max-width: 1000px;
@@ -31,11 +47,14 @@ body {
 /* ヘッダー */
 header {
     background-color: var(--primary-color);
+    background-color: var(--primary-color);
     color: white;
+    padding: 15px 0;
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -48,9 +67,15 @@ header .container {
 .site-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
+    font-size: 1.8em;
     font-weight: 700;
     color: white;
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.site-title:hover {
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
@@ -62,7 +87,10 @@ header ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    margin: 0;
+    padding: 0;
     display: flex;
+    gap: 30px;
     gap: 30px;
 }
 
@@ -75,14 +103,23 @@ header ul li a {
 
 header ul li a:hover {
     color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
+header ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* ヒーローセクション（カルーセル） */
 /* ヒーローセクション（カルーセル） */
 .carousel-container {
     position: relative;
     height: 60vh;
+    height: 60vh;
     width: 100%;
     overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
@@ -110,8 +147,11 @@ header ul li a:hover {
 .hero-content {
     position: relative;
     z-index: 3;
+    position: relative;
+    z-index: 3;
     text-align: center;
     color: white;
+    padding: 0 20px;
     padding: 0 20px;
 }
 
@@ -126,15 +166,26 @@ header ul li a:hover {
     font-size: 1.5em;
     font-weight: 300;
     opacity: 0.8;
+    font-size: 3.8em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-subheading {
+    font-size: 1.5em;
+    font-weight: 300;
+    opacity: 0.8;
 }
 
 .carousel-dots {
     position: absolute;
     bottom: 30px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     display: flex;
+    gap: 8px;
     gap: 8px;
 }
 
@@ -142,12 +193,17 @@ header ul li a:hover {
     height: 12px;
     width: 12px;
     background-color: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
 
 .dot.active {
+    background-color: var(--secondary-color);
+    border: 2px solid white;
     background-color: var(--secondary-color);
     border: 2px solid white;
 }
@@ -163,12 +219,22 @@ h2 {
     text-align: center;
     margin-bottom: 50px;
     color: var(--primary-color);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-color);
     position: relative;
 }
 
 h2::after {
     content: '';
+    content: '';
     display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
     width: 60px;
     height: 4px;
     background-color: var(--secondary-color);
@@ -178,17 +244,20 @@ h2::after {
 
 .section-bg-light { background-color: var(--light-bg); }
 .section-bg-dark { background-color: var(--dark-bg); }
+.section-bg-light { background-color: var(--light-bg); }
+.section-bg-dark { background-color: var(--dark-bg); }
 
 /* プロフィール・スキル・ホビー カードデザイン */
-.profile-card, .skill-item, .hobby-item {
+.profile-card, .career-item, .skill-item, .hobby-item {
     background-color: var(--card-bg);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* カード同士の縦の間隔 */
 }
 
-.profile-card:hover, .skill-item:hover, .hobby-item:hover {
+.profile-card:hover, .career-item:hover, .skill-item:hover, .hobby-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
@@ -196,27 +265,74 @@ h2::after {
 .profile-card {
     display: flex;
     flex-direction: column;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     text-align: center;
 }
 
 .profile-photo {
     width: 180px;
     height: 180px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid var(--primary-color);
+    border: 5px solid var(--secondary-color);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin-bottom: 20px;
 }
+/* キャリアセクション固有の調整 */
+.career-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
 
+.career-date {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* キャリア内のリンク（雙峰祭など） */
+.career-item a {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid var(--secondary-color);
+    margin-bottom: 10px;
+    transition: opacity 0.3s;
+}
+
+.career-item a:hover {
+    opacity: 0.7;
+}
 /* スキルグリッド */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
+.skill-item h3 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skill-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 .skill-item h3 {
     color: var(--secondary-color);
     font-size: 1.5em;
@@ -237,9 +353,8 @@ h2::after {
     padding: 10px;
     border-radius: 4px;
     font-size: 1em;
-    color: #555;
+    list-style: none; /* 点を消す */
 }
-
 /* 作品ボタン */
 .works-link-container {
     text-align: center;
@@ -249,7 +364,14 @@ h2::after {
 .works-button {
     display: inline-block;
     background-color: var(--secondary-color);
+    display: inline-block;
+    background-color: var(--secondary-color);
     color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.2em;
@@ -258,9 +380,28 @@ h2::after {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .works-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* 趣味 */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.hobby-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
     background-color: var(--primary-color);
     transform: translateY(-3px) scale(1.05);
 }
@@ -286,6 +427,7 @@ h2::after {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    gap: 30px;
 }
 
 .link-card {
@@ -294,9 +436,22 @@ h2::after {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     text-decoration: none;
+    background-color: var(--card-bg);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--dark-bg);
     gap: 10px;
     min-width: 150px;
     transition: all 0.3s ease;
@@ -325,8 +480,26 @@ footer {
     text-align: center;
     padding: 25px 0;
     margin-top: 50px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
+.link-card span {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* フッター */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+}
+
+/* スクロールアニメーション (reveal) */
 /* スクロールアニメーション (reveal) */
 .reveal {
     opacity: 0;
@@ -339,6 +512,11 @@ footer {
     transform: translateY(0);
 }
 
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .hero-heading { font-size: 2.5em; }
+    header .container { flex-direction: column; }
+    header ul { margin-top: 15px; }
 /* レスポンシブ */
 @media (max-width: 768px) {
     .hero-heading { font-size: 2.5em; }
