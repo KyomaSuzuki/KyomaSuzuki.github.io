@@ -333,6 +333,7 @@ h2::after {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
 .skill-item h3 {
     color: var(--secondary-color);
     font-size: 1.5em;
@@ -512,11 +513,6 @@ footer {
     transform: translateY(0);
 }
 
-/* レスポンシブ */
-@media (max-width: 768px) {
-    .hero-heading { font-size: 2.5em; }
-    header .container { flex-direction: column; }
-    header ul { margin-top: 15px; }
 /* レスポンシブ */
 @media (max-width: 768px) {
     .hero-heading { font-size: 2.5em; }
