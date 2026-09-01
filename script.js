@@ -97,3 +97,51 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   revealElements.forEach((el) => revealObserver.observe(el));
 });
+
+// --- 押したら動く「ロボットギミック」ボタン ---
+const robotButton = document.getElementById("robot-gimmick-btn");
+if (robotButton) {
+  const messages = [
+    "起動中… システムチェックOK！",
+    "モーター、正常に稼働しています",
+    "ギア比、完璧です",
+    "ロボット、動作確認完了！",
+    "工学の力、ここに見せます",
+    "トルク全開でいきます",
+  ];
+  const speechBubble = document.getElementById("robot-speech-bubble");
+
+  function spawnGear() {
+    const gear = document.createElement("span");
+    gear.className = "falling-gear";
+    gear.textContent = "⚙️";
+    gear.style.left = Math.random() * 100 + "vw";
+    gear.style.animationDuration = 1.8 + Math.random() * 1.4 + "s";
+    gear.style.fontSize = 14 + Math.random() * 18 + "px";
+    document.body.appendChild(gear);
+    gear.addEventListener("animationend", () => gear.remove());
+  }
+
+  robotButton.addEventListener("click", () => {
+    // ボタン自体をぐるんと回転
+    robotButton.classList.remove("spin");
+    void robotButton.offsetWidth; // reflow でアニメーションをリスタート
+    robotButton.classList.add("spin");
+
+    // 歯車を降らせる
+    for (let i = 0; i < 24; i++) {
+      setTimeout(spawnGear, i * 40);
+    }
+
+    // 吹き出しメッセージ
+    if (speechBubble) {
+      speechBubble.textContent =
+        messages[Math.floor(Math.random() * messages.length)];
+      speechBubble.classList.add("show");
+      clearTimeout(speechBubble._hideTimer);
+      speechBubble._hideTimer = setTimeout(() => {
+        speechBubble.classList.remove("show");
+      }, 2200);
+    }
+  });
+}

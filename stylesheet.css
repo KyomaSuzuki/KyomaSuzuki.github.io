@@ -605,6 +605,111 @@ footer {
     }
 }
 
+/*ロボットのギミック*/
+.robot-gimmick-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.8em;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.robot-gimmick-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.08);
+}
+
+.robot-gimmick-btn:active {
+    transform: scale(0.95);
+}
+
+.robot-gimmick-btn.spin {
+    animation: robot-spin 0.7s ease;
+}
+
+@keyframes robot-spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(360deg) scale(1.25);
+    }
+
+    100% {
+        transform: rotate(720deg) scale(1);
+    }
+}
+
+.robot-speech-bubble {
+    position: fixed;
+    right: 24px;
+    bottom: 92px;
+    max-width: 220px;
+    background-color: white;
+    color: var(--text-color);
+    padding: 10px 16px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.robot-speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.robot-speech-bubble.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.falling-gear {
+    position: fixed;
+    top: -40px;
+    color: var(--secondary-color);
+    z-index: 1999;
+    pointer-events: none;
+    animation-name: gear-fall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes gear-fall {
+    0% {
+        transform: translateY(-40px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(480deg);
+        opacity: 0.8;
+    }
+}
+
 /* Skillsカードの3Dチルト演出 */
 .tilt-card {
     transition: transform 0.15s ease-out, box-shadow 0.3s ease;
