@@ -15,7 +15,7 @@
     <meta property="og:title" content="Kyoma Suzuki" />
     <meta
       property="og:description"
-      content="筑波大学の鈴木暁満（すずき きょうま）のポートフォリオサイトです。スキル、経歴、趣味などを紹介しています。"
+      content="筑波大学大学院の鈴木暁満（すずき きょうま）のポートフォリオサイトです。スキル、経歴、趣味などを紹介しています。"
     />
     <meta property="og:site_name" content="Kyoma Suzuki" />
     <meta
@@ -23,10 +23,15 @@
       content="https://kyomasuzuki.github.io/images/ogp.png"
     />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <meta
+      name="description"
+      content="筑波大学の鈴木暁満（すずき きょうま）のポートフォリオサイトです。スキル、経歴、趣味などを紹介しています。"
+    />
   </head>
   <body>
     <header>
@@ -82,7 +87,7 @@
               rgba(0, 0, 0, 0.5),
               rgba(0, 0, 0, 0.5)
             ),
-            url('images/hero_background3.png');
+            url('images/hero_background3.jpg');
         "
       >
         <div class="hero-content">
@@ -121,9 +126,11 @@
           <p>
             工学の基礎から応用まで幅広く学習。機械工学を学んでおり、ロボット開発を行っています。
           </p>
-          <h3>筑波大学大学院</h3>
-          <p class="career-date">2026年4月-（予定）</p>
-          <p>大学院進学予定。</p>
+          <h3>筑波大学大学院理工情報生命学術院システム情報工学研究群知能機能システム学位プログラム</h3>
+          <p class="career-date">2026年4月-</p>
+          <p>
+            ロボット開発の研究を行っています。
+          </p>
         </div>
         <div class="career-item">
           <h3>サークル活動</h3>
@@ -136,9 +143,11 @@
           <p>
             新入生歓迎委員会の副委員長として、新規企画の運営までを担いました。
           </p>
-          <a href="https://www.stb.tsukuba.ac.jp/~shinkan/" target="_blank"
-            >新入生歓迎委員会公式サイト</a
-          >
+          <a href="https://www.stb.tsukuba.ac.jp/~shinkan/" target="_blank">新入生歓迎委員会公式サイト</a>
+          <p class="career-date">2026年 -</p>
+          <p>
+            未来社会デザイン棟学生事業推進チームで活動中
+          </p>
         </div>
       </section>
 
@@ -243,9 +252,14 @@
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 Kyoma Suzuki</p>
+        <p>&copy; <span id="copyright-year">2025</span> Kyoma Suzuki</p>
       </div>
     </footer>
+
+    <div id="robot-speech-bubble" class="robot-speech-bubble"></div>
+    <button id="robot-gimmick-btn" class="robot-gimmick-btn" aria-label="ロボットを起動する" title="押してみて！">
+      🤖
+    </button>
 
     <script src="script.js"></script>
   </body>
