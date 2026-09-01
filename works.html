@@ -12,6 +12,16 @@
       content="https://kyomasuzuki.github.io/works.html"
     />
     <meta property="og:title" content="Kyoma Suzuki | Works (制作物一覧)" />
+    <meta
+      name="description"
+      content="鈴木暁満の制作物一覧ページです。個人・チームで手がけたプロジェクトを紹介しています。"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="manifest" href="images/site.webmanifest" />
   </head>
   <body>
     <header>
@@ -36,6 +46,8 @@
         <p class="section-description">
           これまでに個人やチームで制作したプロジェクトの一部を紹介します。
         </p>
+        <div class="works-grid" id="works-grid">
+          <!-- 作品カードは works-data.js のデータから自動生成されます -->
         <div class="works-grid">
           <div class="work-card">
             <img
@@ -62,9 +74,17 @@
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 Kyoma Suzuki</p>
+        <p>&copy; <span id="copyright-year">2025</span> Kyoma Suzuki</p>
       </div>
     </footer>
+
+    <div id="robot-speech-bubble" class="robot-speech-bubble"></div>
+    <button id="robot-gimmick-btn" class="robot-gimmick-btn" aria-label="ロボットを起動する" title="押してみて！">
+      🤖
+    </button>
+
+    <script src="works-data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
