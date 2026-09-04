@@ -38,11 +38,23 @@ const worksData = [
         description: "Ipadで使えるPOSレジアプリを作りました。新入生歓迎委員会で学園祭に出店する際に作りました。簡単に会計ができ、ログを見ることができます。",
         links: [
             {
-                label: "Githubリポジトリ",
-                url: "https://github.com/KyomaSuzuki/Register",
+                label: "webアプリ",
+                url: "https://kyomasuzuki.github.io/Register/",
+
             },
         ],
 
+    },
+    {
+        image: "images/works/shooting.jpg",
+        title: "縦型シューティングゲーム（開発中）",
+        description: "ロケットを操作して敵を倒すシューティングゲームです。Unityで作りました。",
+        links: [
+            {
+                labels: "Githubリポジトリ",
+                url: "https://github.com/KyomaSuzuki/shooting",
+            }
+        ]
     }
 ];
 
