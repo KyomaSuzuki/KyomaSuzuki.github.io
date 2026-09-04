@@ -32,17 +32,17 @@ const worksData = [
             },
         ],
     },
+    {
+        image: "images/works/ipadPos.jpg",
+        title: "Ipad POSレジwebアプリ",
+        description: "Ipadで使えるPOSレジアプリを作りました。新入生歓迎委員会で学園祭に出店する際に作りました。簡単に会計ができ、ログを見ることができます。",
+        links: [
+            {
+                label: "Githubリポジトリ",
+                url: "https://github.com/KyomaSuzuki/Register",
+            },
+        ],
 
-    // ↓↓↓ 新しい作品を追加する場合は、このコメントの下に
-    // 上と同じ形式でオブジェクトを追加してください。
-    //
-    // {
-    //   image: "images/works/例.jpg",
-    //   title: "作品名",
-    //   description: "説明文をここに書きます。",
-    //   links: [
-    //     { label: "GitHubリポジトリ", url: "https://github.com/..." },
-    //     { label: "デモを見る", url: "https://..." },
-    //   ],
-    // },
+    }
 ];
+
