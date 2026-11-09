@@ -20,6 +20,7 @@
  */
 
 const worksData = [
+    //自動噴霧器
     {
         image: "images/works/spray.JPG",
         title: "自動首振り噴霧器",
@@ -32,17 +33,70 @@ const worksData = [
             },
         ],
     },
+    //ipadPOS
     {
         image: "images/works/ipadPos.jpg",
         title: "Ipad POSレジwebアプリ",
         description: "Ipadで使えるPOSレジアプリを作りました。新入生歓迎委員会で学園祭に出店する際に作りました。簡単に会計ができ、ログを見ることができます。",
         links: [
             {
-                label: "Githubリポジトリ",
-                url: "https://github.com/KyomaSuzuki/Register",
+                label: "webアプリ",
+                url: "https://kyomasuzuki.github.io/Register/",
+
             },
         ],
 
-    }
+    },
+    //シューティング
+    {
+        image: "images/works/shooting.jpg",
+        title: "縦型シューティングゲーム（開発中）",
+        description: "ロケットを操作して敵を倒すシューティングゲームです。Unityで作りました。",
+        links: [
+            {
+                labels: "Githubリポジトリ",
+                url: "https://github.com/KyomaSuzuki/shooting",
+            }
+        ]
+    },
+    //リーダーサイト
+    {
+        image: "images/works/leader-site.png",
+        title: "リーダーのためのワークシート",
+        description:
+            "サークル・委員会のリーダーのための、無料のワークシート。自分の組織運営の経験をもとに、経営学の定番フレームワークをサークル活動に活かせる形に置きかえました。",
+        links: [
+            {
+                label: "webサイト",
+                url: "https://learder-worksheet.hiyokingofheart.workers.dev/",
+            },
+        ],
+    },
+    //PCスタンド
+    {
+        image: "",
+        title: "PCスタンド",
+        description:
+            "",
+        links: [
+            {
+                label: "",
+                url: "",
+            },
+        ],
+    },
+    //PIDシミュレーター
+    {
+        image: "",
+        title: "PIDシミュレーター",
+        description:
+            "PID制御のシミュレーションができるサイトを作成しました。",
+        links: [
+            {
+                label: "webサイト（開発中）",
+                url: "https://kyomasuzuki.github.io/PID-simulator/",
+            },
+        ],
+    },
 ];
 
